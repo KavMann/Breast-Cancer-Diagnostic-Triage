@@ -1,0 +1,16 @@
+random_seed: 42
+test_size: 0.20
+cv_folds: 5
+rule_out_recall_targets:
+  - 0.95
+  - 0.98
+deferral_capacities:
+  - 0.10
+  - 0.20
+  - 0.30
+cost_ratios:
+  fn_to_fp:
+    - 5
+    - 10
+tau_high: 0.70
+bootstrap_resamples: 1000

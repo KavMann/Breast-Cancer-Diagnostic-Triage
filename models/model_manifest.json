@@ -1,0 +1,95 @@
+{
+  "BrEaST": {
+    "file": "models/breast_calibrated_pipeline.joblib",
+    "features": [
+      "rad_area",
+      "rad_perimeter",
+      "rad_circularity",
+      "rad_solidity",
+      "rad_eccentricity",
+      "rad_extent",
+      "rad_aspect_ratio",
+      "rad_in_mean",
+      "rad_in_std",
+      "rad_in_skew",
+      "rad_in_entropy",
+      "rad_ring_mean",
+      "rad_ring_std",
+      "rad_ring_skew",
+      "rad_ring_entropy",
+      "rad_contrast_ratio",
+      "shape_binary",
+      "margin_binary",
+      "age"
+    ],
+    "model_type": "LogisticRegression",
+    "calibration": "Platt Sigmoid (cv=3)",
+    "train_samples": 192,
+    "target": "malignant (1=malignant, 0=benign)"
+  },
+  "BUS-BRA": {
+    "file": "models/busbra_calibrated_pipeline.joblib",
+    "features": [
+      "rad_area",
+      "rad_perimeter",
+      "rad_circularity",
+      "rad_solidity",
+      "rad_eccentricity",
+      "rad_extent",
+      "rad_aspect_ratio",
+      "rad_in_mean",
+      "rad_in_std",
+      "rad_in_skew",
+      "rad_in_entropy",
+      "rad_ring_mean",
+      "rad_ring_std",
+      "rad_ring_skew",
+      "rad_ring_entropy",
+      "rad_contrast_ratio"
+    ],
+    "model_type": "LogisticRegression",
+    "calibration": "Platt Sigmoid (cv=3)",
+    "train_samples": 1500,
+    "target": "malignant (1=malignant, 0=benign)"
+  },
+  "UCI_MMD": {
+    "file": "models/uci_mmd_calibrated_pipeline.joblib",
+    "features": [
+      "Age",
+      "Shape",
+      "Margin",
+      "Density",
+      "shape_binary",
+      "margin_binary"
+    ],
+    "model_type": "LogisticRegression",
+    "calibration": "Platt Sigmoid (cv=3)",
+    "train_samples": 768,
+    "target": "malignant (1=malignant, 0=benign)"
+  },
+  "Triage_Gate": {
+    "file": "models/triage_deferral_gate_pipeline.joblib",
+    "features": [
+      "rad_area",
+      "rad_perimeter",
+      "rad_circularity",
+      "rad_solidity",
+      "rad_eccentricity",
+      "rad_extent",
+      "rad_aspect_ratio",
+      "rad_in_mean",
+      "rad_in_std",
+      "rad_in_skew",
+      "rad_in_entropy",
+      "rad_ring_mean",
+      "rad_ring_std",
+      "rad_ring_skew",
+      "rad_ring_entropy",
+      "rad_contrast_ratio",
+      "p_hat",
+      "p_margin"
+    ],
+    "model_type": "LogisticRegression (5x FN penalty)",
+    "purpose": "Learned deferral gate predicting probability of base model diagnostic error"
+  }
+}
